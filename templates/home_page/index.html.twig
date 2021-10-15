@@ -1,0 +1,253 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomePageController!
+{% endblock %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	<style>
+		{% include "css/carouselHome.css" %}</style>
+{% endblock %}
+
+{% block body %}
+	<style>
+		.example-wrapper {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+		.example-wrapper code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style>
+
+	<header>
+		{% include "_shared/_navbar.html.twig" %}
+		{% include "_shared/_carousel.html.twig" %}
+	</header>
+
+	<div
+		class="">
+		<!--Main layout-->
+		<main class="mt-5">
+			<div
+				class="container">
+
+				<!--Section: Content-->
+				<section class="text-center">
+					<h4 class="mb-5">
+						<strong>Facilis consequatur eligendi</strong>
+					</h4>
+
+					<div class="row">
+						{% for i in 1..4 %}
+							{% include "_shared/_card.html.twig" %}
+						{% endfor %}
+
+					</div>
+				</section>
+				<!--Section: Content-->
+
+				<hr
+				class="my-5"/>
+
+				<!--Section: Content-->
+
+				<section class="text-center">
+					<h4 class="mb-5">
+						<strong>Quel type de site voulez vous ?</strong>
+					</h4>
+					{% set modals = 
+                        {1:{'title':'Affaires', 'icon': 'suitcase', items: {1:'Lebleu', 2:'Lerouge'}},
+                        2:{'title':'Boutique en Ligne', 'icon': 'shopping-cart', items: {1:'Levert', 2:'Lejaune'}},
+                        3:{'title':'Administration', 'icon': 'city', items: {1:'Leorange', 2:'Leviolet'}},
+                        4:{'title':'Services de Bricolage', 'icon': 'wrench', items: {1:'Lerose', 2:'Letuquoise'}},
+                        5:{'title':'Restauration & Alimentation', 'icon': 'utensils', items: {1:'Lebleu', 2:'Lerouge'}},
+                        6:{'title':'Photographie', 'icon': 'camera', items: {1:'Lebleu', 2:'Lerouge'}},
+                        7:{'title':'Évenements', 'icon': 'calendar', items: {1:'Lebleu', 2:'Lerouge'}},
+                        8:{'title':'Technologie & Web', 'icon': 'desktop', items: {1:'Lebleu', 2:'Lerouge'}},
+                        9:{'title':'Services de Transports', 'icon': 'car', items: {1:'Lebleu', 2:'Lerouge'}},
+                        10:{'title':'Hôtellerie & Tourisme', 'icon': 'plane', items: {1:'Lebleu', 2:'Lerouge'}},
+                        11:{'title':'Musique', 'icon': 'headphones', items: {1:'Lebleu', 2:'Lerouge'}},
+                        12:{'title':'Arts Créatifs', 'icon': 'film', items: {1:'Lebleu', 2:'Lerouge'}},
+                        13:{'title':'Santé', 'icon': 'heartbeat', items: {1:'Lebleu', 2:'Lerouge'}},
+                        14:{'title':'Sport & Loisirs', 'icon': 'basketball-ball', items: {1:'Lebleu', 2:'Lerouge'}},
+                        15:{'title':'CV & Portefolio', 'icon': 'id-card', items: {1:'Lebleu', 2:'Lerouge'}},
+                        16:{'title':'Communautés', 'icon': 'child', items: {1:'Lebleu', 2:'Lerouge'}}}
+                    %}
+
+					<div class="row">
+						{% for key, item in modals %}
+							{% include "_shared/_modal.html.twig" with {'title':item.title, 'icon': item.icon, key, items: item.items} %}
+						{% endfor %}
+					</div>
+				</section>
+
+				<!--Section: Content-->
+
+				<hr
+				class="my-5"/>
+
+				<!--Section: Content-->
+				<section>
+					<div class="row">
+						<div class="col-md-6 gx-5 mb-4">
+							<div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+								<img src="https://mdbootstrap.com/img/new/slides/031.jpg" class="img-fluid"/>
+								<a href="#!">
+									<div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-md-6 gx-5 mb-4">
+							<h4>
+								<strong>Facilis consequatur eligendi</strong>
+							</h4>
+							<p class="text-muted">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis consequatur eligendi quisquam doloremque vero ex debitis veritatis placeat unde animi laborum sapiente illo possimus, commodi dignissimos obcaecati illum maiores corporis.
+							</p>
+							<p>
+								<strong>Doloremque vero ex debitis veritatis?</strong>
+							</p>
+							<p class="text-muted">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod itaque voluptate nesciunt laborum incidunt. Officia, quam consectetur. Earum eligendi aliquam illum alias, unde optio accusantium soluta, iusto molestiae adipisci et?
+							</p>
+						</div>
+					</div>
+				</section>
+				<!--Section: Content-->
+
+				<hr
+				class="my-5"/>
+
+				<!--Section: Content-->
+				<section class="text-center">
+					<h4>
+						<strong>~~~ Logos ~~~</strong>
+					</h4>
+
+					<div class="row">
+						{% for i in 1..4 %}
+							{% include "_shared/_card.html.twig" %}
+						{% endfor %}
+					</div>
+
+					<div class="row">
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero inventore aspernatur odio beatae in eos eveniet perferendis mollitia alias eum recusandae quasi eaque, dolorem dolores amet nihil ad repellat veritatis aliquid labore totam quas obcaecati veniam nisi? Voluptas soluta incidunt rerum nobis error sequi maiores magni aut, minus harum corporis!</p>
+					</div>
+
+					<div class="row">
+						<button type="button" class="btn btn-primary btn-rounded">VOIR NOS LOGOS</button>
+					</div>
+				</section>
+				<!--Section: Content-->
+
+				<hr
+				class="my-5"/>
+
+				<!--Section: Content-->
+				<section class="text-center">
+					<h4>
+						<strong>~~~ Applications ~~~</strong>
+					</h4>
+
+					<div class="row">
+						{% for i in 1..3 %}
+							{% include "_shared/_card.html.twig" %}
+						{% endfor %}
+					</div>
+
+					<div class="row">
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero inventore aspernatur odio beatae in eos eveniet perferendis mollitia alias eum recusandae quasi eaque, dolorem dolores amet nihil ad repellat veritatis aliquid labore totam quas obcaecati veniam nisi? Voluptas soluta incidunt rerum nobis error sequi maiores magni aut, minus harum corporis!</p>
+					</div>
+
+					<div class="row">
+						<button type="button" class="btn btn-primary btn-rounded">VOIR NOS APPLICATIONS</button>
+					</div>
+				</section>
+				<!--Section: Content-->
+
+				<hr
+				class="my-5"/>
+
+				<!--Section: Content-->
+				<section>
+					<div class="row">
+						<div class="col-md-6 gx-5 mb-4">
+							<h4>
+								<strong>Facilis consequatur eligendi</strong>
+							</h4>
+							<p class="text-muted">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis consequatur eligendi quisquam doloremque vero ex debitis veritatis placeat unde animi laborum sapiente illo possimus, commodi dignissimos obcaecati illum maiores corporis.
+							</p>
+							<p>
+								<strong>Doloremque vero ex debitis veritatis?</strong>
+							</p>
+							<p class="text-muted">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod itaque voluptate nesciunt laborum incidunt. Officia, quam consectetur. Earum eligendi aliquam illum alias, unde optio accusantium soluta, iusto molestiae adipisci et?
+							</p>
+						</div>
+
+						<div class="col-md-6 gx-5 mb-4">
+							<div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+								<img src="https://mdbootstrap.com/img/new/slides/031.jpg" class="img-fluid"/>
+								<a href="#!">
+									<div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!--Section: Content-->
+
+				<hr
+				class="my-5"/>
+
+				<!--Section: Content-->
+				<section class="text-center">
+					<h4>
+						<strong>~~~ Présentations ~~~</strong>
+					</h4>
+
+					<div class="row">
+						{% for i in 1..3 %}
+							{% include "_shared/_card.html.twig" %}
+						{% endfor %}
+					</div>
+
+					<div class="row">
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero inventore aspernatur odio beatae in eos eveniet perferendis mollitia alias eum recusandae quasi eaque, dolorem dolores amet nihil ad repellat veritatis aliquid labore totam quas obcaecati veniam nisi? Voluptas soluta incidunt rerum nobis error sequi maiores magni aut, minus harum corporis!</p>
+					</div>
+				</section>
+				<!--Section: Content-->
+
+				<hr
+				class="my-5"/>
+
+				<!--Section: Content-->
+				<section class="text-center">
+					<h4>
+						<strong>~~~ Cartes de Visite ~~~</strong>
+					</h4>
+
+					<div class="row">
+						{% for i in 1..9 %}
+							{% include "_shared/_card.html.twig" with {i,items:{'name':'ALpha','price':'250'}} %}
+						{% endfor %}
+					</div>
+
+					<div class="row">
+						<button type="button" class="btn btn-primary btn-rounded">VOIR NOS CARTES DE VISITES</button>
+					</div>
+				</section>
+				<!--Section: Content-->
+
+				<hr class="my-5"/>
+			</div>
+		</main>
+		<!--Main layout-->
+	</div>
+{% endblock %}
