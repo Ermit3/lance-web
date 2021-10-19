@@ -3,10 +3,9 @@
 {% block title %}Hello HomePageController!
 {% endblock %}
 
-{% block stylesheets %}
-	{{ parent() }}
-	<style>
-		{% include "css/carouselHome.css" %}</style>
+{% block header %}
+	{% include "_shared/_navbar.html.twig" with {'type':'light'} %}
+	{% include "_shared/_carousel.html.twig" %}
 {% endblock %}
 
 {% block body %}
@@ -23,10 +22,6 @@
 		}
 	</style>
 
-	<header>
-		{% include "_shared/_navbar.html.twig" %}
-		{% include "_shared/_carousel.html.twig" %}
-	</header>
 
 	<div
 		class="">

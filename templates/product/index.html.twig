@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product!
+{% endblock %}
+
+{% block header %}
+	{% include "_shared/_navbar.html.twig" with {'type':'light'} %}
+	{% include "_shared/_carousel.html.twig" %}
+{% endblock %}
+
+{% block body %}
+	<style>
+		.example-wrapper {
+			margin: 1em auto;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+		.example-wrapper code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style>
+
+	<div class="example-wrapper">
+		<div class="container">
+
+			<section>
+				<div class="row">
+					<div class="col-md-7">
+						<img src="" alt="">
+					</div>
+					<div class="col-md-5">
+						<h4>Template</h4>
+						<h5>Site Lorem</h5>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam accusantium quis quibusdam tenetur nostrum in, fugit sunt obcaecati nemo cupiditate, sit deleniti praesentium molestiae laboriosam!</p>
+
+						<button type="button" class="btn btn-primary">APERCU</button>
+						<button type="button" class="btn btn-outline-info">SELECTIONNER</button>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<div class="row">
+					<div class="col-md-7">
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">Pack</th>
+									<th scope="col"></th>
+									<th scope="col"></th>
+									<th scope="col"></th>
+									<th scope="col">Prix</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Projet</td>
+									<td>Etudes et Analyse</td>
+									<td>Devis</td>
+									<td></td>
+									<td>Gratuit</td>
+								</tr>
+								<tr>
+									<th>Site</th>
+									<td>Pâtisserie</td>
+									<td>Restaurants-et-Alimentations</td>
+									<td>SSY12017AE</td>
+									<td>2545 €</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-5">
+						<h5>Spécificités :</h5>
+						<p>Symfony</p>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<div class="row">
+					<div class="col">
+						<h5 class="text-center">Contacter l'Agence pour plus d'informations sur ce produit</h5>
+					</div>
+					<div class="col-md-12">
+						<button type="button" class="btn btn-outline-secondary" data-mdb-ripple-color="dark">Nous contacter</button>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+{% endblock %}

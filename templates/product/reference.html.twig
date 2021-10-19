@@ -1,0 +1,165 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product!
+{% endblock %}
+
+{% block header %}
+	{% include "_shared/_navbar.html.twig" with {'type':'light'} %}
+	{% include "_shared/_carousel.html.twig" %}
+{% endblock %}
+
+{% block body %}
+	<style>
+		.example-wrapper {
+			margin: 1em auto;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+		.example-wrapper code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style>
+
+	<div class="example-wrapper">
+		<div class="container">
+			<section>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="col-md-12">
+							<h5>La Référence de votre séléction est :</h5>
+							<h5>SSY12017AE</h5>
+						</div>
+						<div class="col-md-12">
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium mollitia beatae tempora nesciunt rerum, corrupti esse accusamus labore eligendi laborum.</p>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<img src="" alt="">
+					</div>
+
+					<div class="col-md-4">
+						<div class="col-md-12">
+							<h5>Site Internet</h5>
+						</div>
+						<div class="col-md-12">
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium mollitia beatae tempora nesciunt rerum, corrupti esse accusamus labore eligendi laborum.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="text-center">
+				<div class="row">
+					<div class="col">
+						<h4>Pâtisserie</h4>
+						<h5>Restaurants-et-Alimentations</h5>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<form action="GET">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="mb-4">
+								<label class="" for="form2Example1">Reférence</label>
+								<input type="text" id="form2Example1" class="form-control"/>
+							</div>
+
+							<div class="mb-4">
+								<label class="" for="form2Example2">Type de Produit</label>
+								<input type="text" id="form2Example2" class="form-control"/>
+							</div>
+
+							<div class="mb-4">
+								<label class="" for="form2Example3">Type</label>
+								<input type="text" id="form2Example3" class="form-control"/>
+							</div>
+
+							<div class="mb-4">
+								<label class="" for="form2Example4">Commande</label>
+								<input type="text" id="form2Example4" class="form-control"/>
+							</div>
+
+							<div class="mb-4">
+								<label class="" for="form2Example5">Commande</label>
+								<input type="text" id="form2Example5" class="form-control"/>
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="mb-4">
+								<label class="" for="form2Example1">Civilite</label>
+								<input type="text" id="form2Example1" class="form-control"/>
+							</div>
+
+							<div class="mb-4">
+								<label class="" for="form2Example2">Nom du Reférent</label>
+								<input type="text" id="form2Example2" class="form-control"/>
+							</div>
+
+							<div class="mb-4">
+								<label class="" for="form2Example3">Prenom du Reférent</label>
+								<input type="text" id="form2Example3" class="form-control"/>
+							</div>
+
+							<div class="mb-4">
+								<label class="" for="form2Example4">Type Client</label>
+								<input type="text" id="form2Example4" class="form-control"/>
+							</div>
+
+							<div class="mb-4">
+								<label class="" for="form2Example5">Date de Livraison souhaitée</label>
+								<input type="text" id="form2Example5" class="form-control"/>
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="mb-4">
+								<label class="" for="form2Example1">Adresse</label>
+								<input type="text" id="form2Example1" class="form-control"/>
+							</div>
+
+							<div class="mb-4">
+								<label class="" for="form2Example2">Mail</label>
+								<input type="text" id="form2Example2" class="form-control"/>
+							</div>
+
+							<div class="mb-4">
+								<label class="" for="form2Example3">Telephone</label>
+								<input type="text" id="form2Example3" class="form-control"/>
+							</div>
+
+							<div class="mb-4">
+								<label class="" for="form2Example4">Technologie</label>
+								<input type="text" id="form2Example4" class="form-control"/>
+							</div>
+
+							<div class="mb-4">
+								<label class="" for="form2Example5">Quantité</label>
+								<input type="text" id="form2Example5" class="form-control"/>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<h5>Information suplementaire :</h5>
+							<div class="form-outline">
+								<textarea class="form-control" id="textAreaExample" rows="4"></textarea>
+								<label class="form-label" for="textAreaExample">Message</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="row text-center">
+						<div class="col">
+							<button type="button" class="btn btn-outline-warning" data-mdb-ripple-color="dark">Enregistrer</button>
+						</div>
+					</div>
+				</form>
+			</section>
+		</div>
+	</div>
+{% endblock %}
