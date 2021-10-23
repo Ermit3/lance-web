@@ -26,13 +26,14 @@
 
 			<section>
 				<div class="row">
-					<div class="col-md-7">
-						<img src="" alt="">
+					<div class="col-md-6">
+						<img class="img-fluid" src="https://mdbootstrap.com/img/new/standard/nature/18{{key|default('1')}}.jpg" alt="">
 					</div>
 					<div class="col-md-5">
-						<h4>Template</h4>
-						<h5>Site Lorem</h5>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam accusantium quis quibusdam tenetur nostrum in, fugit sunt obcaecati nemo cupiditate, sit deleniti praesentium molestiae laboriosam!</p>
+						<h4>Template
+							{{ product.name }}</h4>
+						<h5>{{ product.productCategory.name }}</h5>
+						<p>Vous avez une vision bien spécifique de ce à quoi votre futur site internet doit ressembler ? Ou justement vous souhaitez être guidé ? Contactez notre équipe d’experts ! Ensemble nous déploierons nos compétences au service de vos clients.</p>
 
 						<button type="button" class="btn btn-primary">APERCU</button>
 						<button type="button" class="btn btn-outline-info">SELECTIONNER</button>
@@ -62,11 +63,12 @@
 									<td>Gratuit</td>
 								</tr>
 								<tr>
-									<th>Site</th>
-									<td>Pâtisserie</td>
-									<td>Restaurants-et-Alimentations</td>
-									<td>SSY12017AE</td>
-									<td>2545 €</td>
+									<th>{{ product.productType.name }}</th>
+									<td>{{ product.name }}</td>
+									<td>{{ product.productCategory.name }}</td>
+									<td>{{ product.reference }}</td>
+									<td>{{ product.price }}
+										€</td>
 								</tr>
 							</tbody>
 						</table>
