@@ -36,7 +36,7 @@
 					</div>
 
 					<div class="col-md-4">
-						<img src="" alt="">
+						<img class="img-fluid" src="https://mdbootstrap.com/img/new/standard/nature/18{{key|default('1')}}.jpg" alt="">
 					</div>
 
 					<div class="col-md-4">
@@ -65,27 +65,27 @@
 						<div class="col-md-4">
 							<div class="mb-4">
 								<label class="" for="form2Example1">Reférence</label>
-								<input type="text" id="form2Example1" class="form-control"/>
+								<input disabled type="text" id="form2Example1" class="form-control" value="{{product.reference}}"/>
 							</div>
 
 							<div class="mb-4">
 								<label class="" for="form2Example2">Type de Produit</label>
-								<input type="text" id="form2Example2" class="form-control"/>
+								<input disabled type="text" id="form2Example2" class="form-control" value="{{product.productType.name}}"/>
 							</div>
 
 							<div class="mb-4">
 								<label class="" for="form2Example3">Type</label>
-								<input type="text" id="form2Example3" class="form-control"/>
+								<input disabled type="text" id="form2Example3" class="form-control" value="{{product.productCategory.name}}"/>
 							</div>
 
 							<div class="mb-4">
 								<label class="" for="form2Example4">Commande</label>
-								<input type="text" id="form2Example4" class="form-control"/>
+								<input disabled type="text" id="form2Example4" class="form-control" value="{{product.name}}"/>
 							</div>
 
 							<div class="mb-4">
-								<label class="" for="form2Example5">Commande</label>
-								<input type="text" id="form2Example5" class="form-control"/>
+								<label class="" for="form2Example5">A partir de :</label>
+								<input disabled type="text" id="form2Example5" class="form-control" value="{{product.price}}"/>
 							</div>
 						</div>
 
@@ -134,7 +134,7 @@
 
 							<div class="mb-4">
 								<label class="" for="form2Example4">Technologie</label>
-								<input type="text" id="form2Example4" class="form-control"/>
+								<input disabled type="text" id="form2Example4" class="form-control" value="Symfony"/>
 							</div>
 
 							<div class="mb-4">

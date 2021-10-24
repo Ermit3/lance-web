@@ -20,10 +20,12 @@ class ProductController extends AbstractController
     }
 
     #[Route('/product/{reference}/commande', name: 'product_reference')]
-    public function selected(): Response
+    public function selected($reference, ProductRepository $productRepository): Response
     {
+        $product = $productRepository->findOneBy(['reference' => $reference]);
+
         return $this->render('product/reference.html.twig', [
-            'controller_name' => 'ProductController',
+            'product' => $product,
         ]);
     }
 }
