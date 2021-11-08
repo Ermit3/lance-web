@@ -1,14 +1,23 @@
 <div class="{{col|default('col')}}">
-	<div class="card">
-		<img src="https://mdbootstrap.com/img/new/standard/nature/18{{key|default('1')}}.jpg" class="card-img-top" alt="..."/>
-		<div class="card-body">
-			<h5 class="card-title">
-				<a href="{{path|default('#')}}">{{ product.name|default('dark') }}</a>
-			</h5>
-			<p class="card-text">
-				A partir de :
-				{{ product.price|default('1000') }}
-			</p>
+	<div class="card p-1">
+		<div class="bg-image ripple" data-mdb-ripple-color="light">
+			<img src="{{img|default('https://mdbootstrap.com/img/new/standard/nature/181.jpg')}}" class="card-img-top" style="border-radius: 2%;" alt="..."/>
+			<a href="{{path|default('#')}}">
+				<div class="mask" style=""></div>
+				<div class="hover-overlay">
+					<div class="mask" style="background-color: rgba(120, 120, 120, 0.7)">
+						<div class="d-flex justify-content-center align-items-center h-100">
+							<p class="text-white mb-0">
+								A partir de :
+								{{ product.price|default('1000') }}
+							</p>
+						</div>
+					</div>
+				</div>
+			</a>
 		</div>
+		<h5 class="card-title text-black">
+			{{ product.name|default('dark') }}
+		</h5>
 	</div>
 </div>

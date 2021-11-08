@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomePageController!
+{% block title %}Localhost : Accueil
 {% endblock %}
 
 {% block header %}
@@ -10,9 +10,11 @@
 
 {% block body %}
 	<style>
+		.container {
+			max-width: 1100px;
+		}
 		.example-wrapper {
 			margin: 1em auto;
-			max-width: 800px;
 			width: 95%;
 			font: 18px / 1.5 sans-serif;
 		}
@@ -24,7 +26,7 @@
 
 
 	<div
-		class="">
+		class="example-wrapper">
 		<!--Main layout-->
 		<main class="mt-5">
 			<div
@@ -33,14 +35,13 @@
 				<!--Section: Content-->
 				<section class="text-center">
 					<h4 class="mb-5">
-						<strong>Facilis consequatur eligendi</strong>
+						<strong>~~Templates Illustratifs~~</strong>
 					</h4>
 
 					<div class="row">
-						{% for k, p in products %}
-							{% include "_shared/_card.html.twig" with {'col':'col-md-3','key':k, 'product':p, 'path': path('product',{'reference':p.reference})} %}
+						{% for k, p in sites %}
+							{% include "_shared/_card.html.twig" with {'col':'col-md-4', 'img': p.mainPicture,'key':k, 'product':p, 'path': path('product',{'reference':p.reference})} %}
 						{% endfor %}
-
 					</div>
 				</section>
 				<!--Section: Content-->
@@ -73,7 +74,7 @@
                         16:{'title':'Communautés', 'icon': 'child', items: {1:'Lebleu', 2:'Lerouge'}}}
                     %}
 
-					<div class="row">
+					<div class="row text-black">
 						{% for key, item in modals %}
 							{% include "_shared/_modal.html.twig" with {'title':item.title, 'icon': item.icon, key, items: item.items} %}
 						{% endfor %}
@@ -82,15 +83,18 @@
 
 				<!--Section: Content-->
 
-				<hr
-				class="my-5"/>
+				<hr class="my-5"/>
 
+			</div>
+
+			<div
+				class="container-fluid">
 				<!--Section: Content-->
 				<section>
-					<div class="row">
+					<div class="row text-black">
 						<div class="col-md-6 gx-5 mb-4">
 							<div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
-								<img src="https://mdbootstrap.com/img/new/slides/031.jpg" class="img-fluid"/>
+								<img src="https://www.leguidedesce.fr/wp-content/uploads/2019/09/enjeux-infog%C3%A9rance.jpg" class="img-fluid"/>
 								<a href="#!">
 									<div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
 								</a>
@@ -99,10 +103,10 @@
 
 						<div class="col-md-6 gx-5 mb-4">
 							<h4>
-								<strong>Facilis consequatur eligendi</strong>
+								<strong>UN SITE SUR-MESURE QUI REPONDRA A TOUTES LES ATTENTES DE VOTRE SECTEUR</strong>
 							</h4>
 							<p class="text-muted">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis consequatur eligendi quisquam doloremque vero ex debitis veritatis placeat unde animi laborum sapiente illo possimus, commodi dignissimos obcaecati illum maiores corporis.
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
 							</p>
 							<p>
 								<strong>Doloremque vero ex debitis veritatis?</strong>
@@ -114,7 +118,9 @@
 					</div>
 				</section>
 				<!--Section: Content-->
+			</div>
 
+			<div class="container">
 				<hr
 				class="my-5"/>
 
@@ -125,8 +131,8 @@
 					</h4>
 
 					<div class="row">
-						{% for i in 1..4 %}
-							{% include "_shared/_card.html.twig" %}
+						{% for k, p in logos %}
+							{% include "_shared/_card.html.twig" with {'col':'col','key':k, 'product':p, 'path': path('product',{'reference':p.reference})} %}
 						{% endfor %}
 					</div>
 
@@ -150,8 +156,8 @@
 					</h4>
 
 					<div class="row">
-						{% for i in 1..3 %}
-							{% include "_shared/_card.html.twig" %}
+						{% for k, p in applications %}
+							{% include "_shared/_card.html.twig" with {'col':'col','key':k, 'product':p, 'path': path('product',{'reference':p.reference})} %}
 						{% endfor %}
 					</div>
 
@@ -165,9 +171,12 @@
 				</section>
 				<!--Section: Content-->
 
-				<hr
-				class="my-5"/>
+				<hr class="my-5"/>
 
+			</div>
+
+			<div
+				class="container-fluid">
 				<!--Section: Content-->
 				<section>
 					<div class="row">
@@ -197,7 +206,8 @@
 					</div>
 				</section>
 				<!--Section: Content-->
-
+			</div>
+			<div class="container">
 				<hr
 				class="my-5"/>
 
@@ -208,7 +218,7 @@
 					</h4>
 
 					<div class="row">
-						{% for i in 1..3 %}
+						{% for i in 1..5 %}
 							{% include "_shared/_card.html.twig" %}
 						{% endfor %}
 					</div>
@@ -229,8 +239,8 @@
 					</h4>
 
 					<div class="row">
-						{% for i in 1..9 %}
-							{% include "_shared/_card.html.twig" with {i,items:{'name':'ALpha','price':'250'}} %}
+						{% for k, p in cartes %}
+							{% include "_shared/_card.html.twig" with {'col':'col-md-4','key':k, 'product':p, 'path': path('product',{'reference':p.reference})} %}
 						{% endfor %}
 					</div>
 

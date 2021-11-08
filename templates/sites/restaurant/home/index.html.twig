@@ -1,0 +1,468 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Restaurant
+{% endblock %}
+
+{% block header %}
+	<style>
+		@media(max-width: 991px) {
+			.navbar-scroll {
+				background-color: #fff;
+			}
+
+			.navbar-scroll .navbar-brand,
+			.navbar-scroll .nav-link,
+			.navbar-scroll .fa-bars {
+				color: #4f4f4f !important;
+			}
+		}
+
+		.navbar-brand {
+			letter-spacing: 3px;
+			font-size: 2rem;
+			font-weight: 500;
+		}
+		.navbar-scroll .navbar-brand,
+		.navbar-scroll .nav-link,
+		.navbar-scroll .fa-bars {
+			color: #fff;
+		}
+
+		.navbar-scroll {
+			box-shadow: none;
+		}
+
+		.navbar-scrolled {
+			box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+		}
+
+		.navbar-scrolled .navbar-brand,
+		.navbar-scrolled .nav-link,
+		.navbar-scrolled .fa-bars {
+			color: #4f4f4f;
+		}
+
+		.navbar-scrolled {
+			background-color: #fff;
+		}
+
+		@media(max-width: 450px) {
+			#intro {
+				height: 950px !important;
+			}
+		}
+
+		@media(min-width: 550px) and(max-width: 750px) {
+			#intro {
+				height: 1100px !important;
+			}
+		}
+
+		@media(min-width: 800px) and(max-width: 990px) {
+			#intro {
+				height: 600px !important;
+			}
+		}
+
+		.display-1 {
+			font-weight: 500 !important;
+			letter-spacing: 40px;
+		}
+
+		@media(min-width: 1600px) {
+			.display-1 {
+				font-size: 10rem;
+			}
+		}
+	</style>
+
+	<header>
+		<!-- Navbar -->
+		<nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#!">RESTAURANT</a>
+				<button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<i class="fas fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#!">ACCUEIL</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#!">INFORMATION</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#!">À PROPOS</a>
+						</li>
+						<div>
+							<li class="nav-item dropdown">
+								<a role="button" class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-mdb-toggle="dropdown" aria-expanded="false">ACTIVITES</a>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<li>
+										<a class="dropdown-item" href="#">Action</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Another action</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Something else here</a>
+									</li>
+								</ul>
+							</li>
+						</div>
+						<li class="nav-item">
+							<a class="nav-link" href="#!">CONTACT</a>
+						</li>
+					</ul>
+					<ul class="navbar-nav d-flex flex-row">
+						<li class="nav-item me-3 me-lg-0">
+							<a class="nav-link">
+								Restaurants-et-Alimentations
+							</a>
+						</li>
+						<li class="nav-item me-3 me-lg-0">
+							<button type="button" class="btn btn-outline-success" data-mdb-ripple-color="dark">
+								<strong>
+									COMMANDE
+								</strong>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- Navbar -->
+
+		<!--Section: Design Block-->
+		<section>
+			<div id="intro" class="bg-image" style="background-image: url('https://nolinskiparis.com/wp-content/uploads/2020/02/Nolinski_Le_Restaurant_12_Guillaume_de_Laubier.jpg');height: 60vh; ">
+				<div class="mask" style="background-color: rgba(0, 0, 0, 0.2);">
+					<div class="container d-flex justify-content-center align-items-center h-100">
+						<div class="row align-items-center">
+							<div class="col-12">
+								<h1 class="mb-0 text-white display-1"></h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--Section: Design Block-->
+	</header>
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<section>
+			<div class="row">
+				<div class="offset-md-5 col-md-2">
+					<img src="https://akobisoft.com/web/Illustrations/Logoresto.jpg" class="img-fluid" alt="">
+				</div>
+			</div>
+			<div class="row">
+				<div class="offset-md-4 col-md-4">
+					<h4 class="text-center">
+						<strong>Expérience et maîtrise des techniques culinaires</strong>
+					</h4>
+					<p>
+						<strong>
+							La gastronomie nécessite un savoir faire, une grande expérience et maîtrise des techniques culinaires… La gastronomie au sens strict englobe l'art de préparer les aliments, de les cuisiner et de les présenter de manière créative, artistique
+						</strong>
+					</p>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<div class="container-fluid" style="background-image: url('https://mdbootstrap.com/img/Photos/new-templates/craftsman/img(1).jpg');height: 300px; ">
+		<section>
+			<div class="row text-white align-items-center" style="padding: 5% 0%;">
+				<div class="col-md-6 offset-md-4">
+					<h3>
+						<strong>
+							Une Gastronomie pour toutes les bourses
+						</strong>
+					</h3>
+				</div>
+				<div class="col-md-6 offset-md-3">
+					<p>
+						<strong>
+							Traditional french cuisine with a selection of seafood, fish and meat dishes. Discover the restaurant La Tablature and book it for free in 3 min and 3 clics. Reservation 100% free. Immediate response. Book Online in 3min
+						</strong>
+					</p>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<div class="container">
+		<section>
+			<div class="row">
+				<div class="col-md-6">
+					<img src="https://akobisoft.com/web/Illustrations/Restao1.jpg" class="img-fluid" alt="">
+				</div>
+				<div class="col-md-6">
+					<h3 class="text-center">
+						<strong>
+							Les briouates de poulet
+						</strong>
+					</h3>
+					<p>
+						Notre but est de partager avec vous notre passion pour la Cuisine. Nostrum exercitationem ullam corporis suscipit laboriosam nisi ut aliquid ex ea commodi consequatur quis autem vel eum iure reprehenderit qui in ea voluptate velit. Dolores eos qui ratione voluptatem sequi nesciunt neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit sed quia non numquam eius modi tempora incidunt ut labore et dolore
+					</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<h3 class="text-center">
+						<strong>
+							Gratin de patate douce
+						</strong>
+					</h3>
+					<p>
+						Notre but est de partager avec vous notre passion pour la Cuisine. Nostrum exercitationem ullam corporis suscipit laboriosam nisi ut aliquid ex ea commodi consequatur quis autem vel eum iure reprehenderit qui in ea voluptate velit. Dolores eos qui ratione voluptatem sequi nesciunt neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit sed quia non numquam eius modi tempora incidunt ut labore et dolore
+					</p>
+				</div>
+				<div class="col-md-6">
+					<img src="https://akobisoft.com/web/Illustrations/Restao2.jpg" class="img-fluid" alt="">
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<div class="container-fluid" style="background-image: url('https://mdbootstrap.com/img/Photos/new-templates/craftsman/img(1).jpg');height: 500px; ">
+		<section>
+			<div class="row" style="padding: 2% 0%;">
+				<div class="offset-md-3 col-md-6">
+					<div class="col text-white text-center">
+						<h2>
+							<strong>MENU DE LA SEMAINE</strong>
+						</h2>
+					</div>
+					<table class="table text-white">
+						<tbody>
+							<tr>
+								<th scope="row">Caille fermière marinée façon bécasse</th>
+								<td></td>
+								<td></td>
+								<td>12.20 €</td>
+							</tr>
+							<tr>
+								<th scope="row">Foie gras poêlé au caramel de cidre</th>
+								<td></td>
+								<td></td>
+								<td>12.20 €</td>
+							</tr>
+							<tr>
+								<th scope="row">Rémoulade de pince de Homard aux Condiments</th>
+								<td></td>
+								<td></td>
+								<td>12.20 €</td>
+							</tr>
+							<tr>
+								<th scope="row">Cuisse de canard confite</th>
+								<td></td>
+								<td></td>
+								<td>12.20 €</td>
+							</tr>
+							<tr>
+								<th scope="row">Dos de cabillaud, râpé de bacon fumé</th>
+								<td></td>
+								<td></td>
+								<td>12.20 €</td>
+							</tr>
+							<tr>
+								<th scope="row">Encornets marinés, juste snackés</th>
+								<td></td>
+								<td></td>
+								<td>12.20 €</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="col-md-12 text-center">
+					<button type="button" class="btn btn-outline-light" data-mdb-ripple-color="dark">
+						<strong>LA CARTE</strong>
+					</button>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<div class="container">
+		<section>
+			<div class="row">
+				<div class="col-md-12">
+					<h4 class="text-center">
+						<strong>
+							Petite Illstration de nos Offres
+						</strong>
+					</h4>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<h3 class="text-center">
+						<strong>
+							Les briouates de poulet
+						</strong>
+					</h3>
+					<p>
+						Notre but est de partager avec vous notre passion pour la Cuisine. Nostrum exercitationem ullam corporis suscipit laboriosam nisi ut aliquid ex ea commodi consequatur quis autem vel eum iure reprehenderit qui in ea voluptate velit. Dolores eos qui ratione voluptatem sequi nesciunt neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit sed quia non numquam eius modi tempora incidunt ut labore et dolore
+					</p>
+				</div>
+				<div class="col-md-6">
+					<img src="https://akobisoft.com/web/Illustrations/Restao1.jpg" class="img-fluid" alt="">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<img src="https://akobisoft.com/web/Illustrations/Restao2.jpg" class="img-fluid" alt="">
+				</div>
+				<div class="col-md-6">
+					<h3 class="text-center">
+						<strong>
+							Gratin de patate douce
+						</strong>
+					</h3>
+					<p>
+						Notre but est de partager avec vous notre passion pour la Cuisine. Nostrum exercitationem ullam corporis suscipit laboriosam nisi ut aliquid ex ea commodi consequatur quis autem vel eum iure reprehenderit qui in ea voluptate velit. Dolores eos qui ratione voluptatem sequi nesciunt neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit sed quia non numquam eius modi tempora incidunt ut labore et dolore
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="text-center">
+						<strong>LES PATISSERIES</strong>
+					</h2>
+				</div>
+				<div class="col-md-12">
+					<p>Notre but est de partager avec vous notre passion pour la pâtisserie. Nostrum exercitationem ullam corporis suscipit laboriosam nisi ut aliquid ex ea commodi consequatur quis autem vel eum iure reprehenderit qui in ea voluptate velit. Dolores eos qui ratione voluptatem sequi nesciunt neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit sed quia non numquam eius modi tempora incidunt ut labore et dolore
+					</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-3"><img src="https://akobisoft.com/web/Illustrations/patisserie1.jpg" alt="" class="img-fluid"></div>
+				<div class="col-md-3"><img src="https://akobisoft.com/web/Illustrations/patisserie2.jpg" alt="" class="img-fluid"></div>
+				<div class="col-md-3"><img src="https://akobisoft.com/web/Illustrations/patisserie3.jpg" alt="" class="img-fluid"></div>
+				<div class="col-md-3"><img src="https://akobisoft.com/web/Illustrations/patisserie_gauche1.jpg" alt="" class="img-fluid"></div>
+			</div>
+		</section>
+	</div>
+{% endblock %}
+
+{% block footer %}
+	<!-- Footer -->
+	<footer
+		class="text-center text-lg-start bg-light text-muted">
+
+		<!-- Section: Links  -->
+		<section class="">
+			<div
+				class="container text-center text-md-start mt-5">
+				<!-- Grid row -->
+				<div
+					class="row mt-3">
+					<!-- Grid column -->
+					<div
+						class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+						<!-- Content -->
+						<h6 class="text-uppercase fw-bold mb-4">
+							<i class="fas fa-gem me-3"></i>NGMA Group
+						</h6>
+						<p>
+							Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						</p>
+					</div>
+					<!-- Grid column -->
+
+					<!-- Grid column -->
+					<div
+						class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+						<!-- Links -->
+						<h6 class="text-uppercase fw-bold mb-4">
+							Products
+						</h6>
+						<p>
+							<a href="#!" class="text-reset">Angular</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">React</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">Vue</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">Laravel</a>
+						</p>
+					</div>
+					<!-- Grid column -->
+
+					<!-- Grid column -->
+					<div
+						class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+						<!-- Links -->
+						<h6 class="text-uppercase fw-bold mb-4">
+							Liens utiles
+						</h6>
+						<p>
+							<a href="#!" class="text-reset">NGMA</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">Parametres</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">Commandes</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">Aide</a>
+						</p>
+					</div>
+					<!-- Grid column -->
+
+					<!-- Grid column -->
+					<div
+						class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+						<!-- Links -->
+						<h6 class="text-uppercase fw-bold mb-4">
+							Contact
+						</h6>
+						<p>
+							<i class="fas fa-home me-3"></i>
+							FRANCE, MP 31100, FR</p>
+						<p>
+							<i class="fas fa-envelope me-3"></i>
+							info@example.com
+						</p>
+						<p>
+							<i class="fas fa-phone me-3"></i>
+							+ 01 234 567 88</p>
+						<p>
+							<i class="fas fa-print me-3"></i>
+							+ 01 234 567 89</p>
+					</div>
+					<!-- Grid column -->
+				</div>
+				<!-- Grid row -->
+			</div>
+		</section>
+		<!-- Section: Links  -->
+
+		<!-- Copyright -->
+		<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+			© 2021 Copyright:
+			<a class="text-reset fw-bold" href="https://mdbootstrap.com/">NGMAErwan.com</a>
+		</div>
+		<!-- Copyright -->
+	</footer>
+	<!-- Footer -->
+{% endblock %}

@@ -6,19 +6,13 @@
 }
 
 .carousel-item:nth-child(1) {
-    background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+    background-image: url('https://www.blue-informatique.com/assets/pictures/photos/blue2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 .carousel-item:nth-child(2) {
-    background-image: url('https://mdbootstrap.com/img/Photos/Others/images/77.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-.carousel-item:nth-child(3) {
-    background-image: url('https://mdbootstrap.com/img/Photos/Others/images/78.jpg');
+    background-image: url('https://www.bellvision.fr/wp-content/uploads/2019/11/bandeau-accueil-bellvision-esn-informatique-entreprise-services-distribution-web-cloud-saint-nazaire.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

@@ -1,0 +1,1042 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Patisserie
+{% endblock %}
+
+{% block header %}
+	<style>
+		/* Color of the links BEFORE scroll */
+		.navbar-scroll .nav-link,
+		.navbar-scroll .navbar-toggler-icon,
+		.navbar-scroll .navbar-brand {
+			color: #fff;
+		}
+
+		/* Color of the links AFTER scroll */
+		.navbar-scrolled .nav-link,
+		.navbar-scrolled .navbar-toggler-icon,
+		.navbar-scrolled .navbar-brand {
+			color: #fff;
+		}
+
+		/* Color of the navbar AFTER scroll */
+		.navbar-scroll,
+		.navbar-scrolled {
+			background-color: #cbbcb1;
+		}
+
+		.mask-custom {
+			backdrop-filter: blur(5px);
+			background-color: rgba(255, 255, 255, 0.15);
+		}
+
+		.navbar-brand {
+			font-size: 1.75rem;
+			letter-spacing: 3px;
+		}
+	</style>
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0">
+		<div class="container">
+			<a class="navbar-brand" href="#!">
+				<span style="color: #5e9693;">Patis</span>
+				<span style="color: #fff;">serie</span>
+			</a>
+			<button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<i class="fas fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#!">ACCUEIL</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#!">INFORMATION</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#!">ACTIVITES</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#!">CONTACT</a>
+					</li>
+				</ul>
+				<ul class="navbar-nav d-flex flex-row">
+					<li class="nav-item me-3 me-lg-0">
+						<a class="nav-link" href="#!">
+							<i class="fas fa-shopping-cart"></i>
+						</a>
+					</li>
+					<li class="nav-item me-3 me-lg-0">
+						<a class="nav-link" href="#!">
+							<i class="fab fa-twitter"></i>
+						</a>
+					</li>
+					<li class="nav-item me-3 me-lg-0">
+						<a class="nav-link" href="#!">
+							<i class="fab fa-instagram"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- Navbar -->
+
+	<div class="bgimg-3">
+		<div class="text-center" style="padding: 10% 0%">
+			<button type="button" class="btn btn-outline-light btn-lg">
+				<strong>PATISSERIE ETOILE</strong>
+			</button>
+		</div>
+	</div>
+{% endblock %}
+
+{% block body %}
+	<style>
+		.example-wrapper {
+			margin: 1em auto;
+			max-width: 1000px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+		.example-wrapper code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+		.bgimg-1,
+		.bgimg-2,
+		.bgimg-3 {
+			position: relative;
+			opacity: 0.95;
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.bgimg-1 {
+			background-image: url('https://akobisoft.com/web/patisserie/imgparallax1.jpg');
+			min-height: 500px;
+		}
+		.bgimg-2 {
+			background-image: url('https://akobisoft.com/web/patisserie/imgparallax3.jpg');
+			min-height: 500px;
+		}
+		.bgimg-3 {
+			background-image: url('https://akobisoft.com/web/patisserie/imgparallax2.jpg');
+			min-height: 500px;
+		}
+
+		.image {
+			max-width: 133px;
+			max-height: 100px;
+			margin: auto;
+			display: block;
+			border-radius: 7%;
+		}
+		section {
+			padding: 2% 0;
+		}
+
+		.pad1 {
+			padding: 1% 0;
+		}
+	</style>
+
+	<div class="example-wrapper">
+		<div class="container">
+			<section>
+				<div class="row text-center">
+					<div class="col-md-12 pad1">
+						<h4>
+							<strong>CETTE SEMAINE LA PATISSERIE VOUS PROPOSE</strong>
+						</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<div class="card h-100">
+							<img src="https://akobisoft.com/web/patisserie/patisserie_gauche1.jpg" class="card-img-top" alt="..."/>
+							<div class="card-body">
+								<h5 class="card-title text-center">Framboisier</h5>
+								<p class="card-text">
+									This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+								</p>
+							</div>
+							<div class="card-footer">
+								<h4 class="text-center">
+									<strong>2.50 €</strong>
+								</h4>
+
+								<!-- Default checkbox -->
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+									<label class="form-check-label" for="flexCheckDefault">
+										<small>Choisir Cette Patisserie</small>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card h-100">
+							<img src="https://akobisoft.com/web/patisserie/patisserie1.jpg" class="card-img-top" alt="..."/>
+							<div class="card-body">
+								<h5 class="card-title text-center">Chou à la crème</h5>
+								<p class="card-text">
+									This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+								</p>
+							</div>
+							<div class="card-footer">
+								<h4 class="text-center">
+									<strong>2.50 €</strong>
+								</h4>
+
+								<!-- Default checkbox -->
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+									<label class="form-check-label" for="flexCheckDefault">
+										<small>Choisir Cette Patisserie</small>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card h-100">
+							<img src="https://akobisoft.com/web/patisserie/patisserie_gauche1.jpg" class="card-img-top" alt="..."/>
+							<div class="card-body">
+								<h5 class="card-title text-center">Délice au noix</h5>
+								<p class="card-text">
+									This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+								</p>
+							</div>
+							<div class="card-footer">
+								<h4 class="text-center">
+									<strong>2.50 €</strong>
+								</h4>
+
+								<!-- Default checkbox -->
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+									<label class="form-check-label" for="flexCheckDefault">
+										<small>Choisir Cette Patisserie</small>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card h-100">
+							<img src="https://akobisoft.com/web/patisserie/patisserie1.jpg" class="card-img-top" alt="..."/>
+							<div class="card-body">
+								<h5 class="card-title text-center">Gateau Marbré</h5>
+								<p class="card-text">
+									This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+								</p>
+							</div>
+							<div class="card-footer">
+								<h4 class="text-center">
+									<strong>2.50 €</strong>
+								</h4>
+
+								<!-- Default checkbox -->
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+									<label class="form-check-label" for="flexCheckDefault">
+										<small>Choisir Cette Patisserie</small>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="col-md-12 text-center">
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+							Commande
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div
+										class="modal-body">
+										<!-- Pills navs -->
+										<ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+											<li class="nav-item" role="presentation">
+												<a class="nav-link active" id="tab-login" data-mdb-toggle="pill" href="#pills-login" role="tab" aria-controls="pills-login" aria-selected="true">Commande</a>
+											</li>
+											<li class="nav-item" role="presentation">
+												<a class="nav-link" id="tab-register" data-mdb-toggle="pill" href="#pills-register" role="tab" aria-controls="pills-register" aria-selected="false">Inscription</a>
+											</li>
+										</ul>
+										<!-- Pills navs -->
+
+										<!-- Pills content -->
+										<div class="tab-content">
+											<div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+												<form>
+													<!-- Email input -->
+													<div class="form-outline mb-4">
+														<input type="email" id="loginName" class="form-control"/>
+														<label class="form-label" for="loginName">Adresse mail</label>
+													</div>
+
+													<!-- Password input -->
+													<div class="form-outline mb-4">
+														<input type="password" id="loginPassword" class="form-control"/>
+														<label class="form-label" for="loginPassword">Mot de passe</label>
+													</div>
+
+													<!-- 2 column grid layout -->
+													<div class="row mb-4">
+														<h4>VOTRE COMMANDE</h4>
+													</div>
+
+													<div>
+														<table class="table">
+															<thead>
+																<tr>
+																	<th scope="col">#</th>
+																	<th scope="col">Produit</th>
+																	<th scope="col">Prix</th>
+																	<th scope="col">Retirer</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<th scope="row">1</th>
+																	<td>Produit 1</td>
+																	<td>2.50 €</td>
+																	<td>
+																		<a>
+																			<i class="fas fa-times"></i>
+																		</a>
+																	</td>
+																</tr>
+																<tr>
+																	<th scope="row">2</th>
+																	<td>Produit 2</td>
+																	<td>2.50 €</td>
+																	<td>
+																		<a>
+																			<i class="fas fa-times"></i>
+																		</a>
+																	</td>
+																</tr>
+																<tr>
+																	<th scope="row">3</th>
+																	<td>Produit 3</td>
+																	<td>2.50 €</td>
+																	<td>
+																		<a>
+																			<i class="fas fa-times"></i>
+																		</a>
+																	</td>
+																</tr>
+																<tr>
+																	<th scope="row">4</th>
+																	<td>Produit 4</td>
+																	<td>2.50 €</td>
+																	<td>
+																		<a>
+																			<i class="fas fa-times"></i>
+																		</a>
+																	</td>
+																</tr>
+																<tr>
+																	<th scope="row">5</th>
+																	<td>Total</td>
+																	<td>10.00 €</td>
+																	<td></td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+
+													<!-- Submit button -->
+													<button type="submit" class="btn btn-primary btn-block mb-4">Commander</button>
+
+													<!-- Register buttons -->
+													<div class="text-center">
+														<p>Vous n'êtes pas inscrit?
+															<a href="#!">Ici</a>
+														</p>
+													</div>
+												</form>
+											</div>
+											<div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+												<form>
+													<!-- Name input -->
+													<div class="form-outline mb-4">
+														<input type="text" id="registerName" class="form-control"/>
+														<label class="form-label" for="registerName">Nom complet</label>
+													</div>
+
+													<!-- Username input -->
+													<div class="form-outline mb-4">
+														<input type="text" id="registerUsername" class="form-control"/>
+														<label class="form-label" for="registerUsername">Pseudo</label>
+													</div>
+
+													<!-- Email input -->
+													<div class="form-outline mb-4">
+														<input type="email" id="registerEmail" class="form-control"/>
+														<label class="form-label" for="registerEmail">Adresse mail</label>
+													</div>
+
+													<!-- Password input -->
+													<div class="form-outline mb-4">
+														<input type="password" id="registerPassword" class="form-control"/>
+														<label class="form-label" for="registerPassword">Mot de passe</label>
+													</div>
+
+													<!-- Repeat Password input -->
+													<div class="form-outline mb-4">
+														<input type="password" id="registerRepeatPassword" class="form-control"/>
+														<label class="form-label" for="registerRepeatPassword">Confirmer mot de passe</label>
+													</div>
+
+													<!-- Checkbox -->
+													<div class="form-check d-flex justify-content-center mb-4">
+														<input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked aria-describedby="registerCheckHelpText"/>
+														<label class="form-check-label" for="registerCheck">
+															J'ai lu et comprends les termes d'utilisations
+														</label>
+													</div>
+
+													<!-- Submit button -->
+													<button type="submit" class="btn btn-primary btn-block mb-3">S'inscrire</button>
+												</form>
+											</div>
+										</div>
+										<!-- Pills content -->
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+											Fermer
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<div class="bgimg-1">
+		<div class="text-center" style="padding: 18% 0%">
+			<button type="button" class="btn btn-outline-light btn-lg">LA CARTE</button>
+		</div>
+	</div>
+
+	<div class="container">
+		<section>
+			<div class="row">
+				<div class="col-md-12 text-center pad1">
+					<h4>LE MENU DU CHEF</h4>
+				</div>
+				<div class="col-md-3">
+					<div class="card h-100">
+						<img src="https://akobisoft.com/web/patisserie/patisserie_droite1.jpg" class="card-img-top" alt="..."/>
+						<div class="card-body">
+							<h5 class="card-title text-center">Framboisier</h5>
+							<p class="card-text">
+								This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+							</p>
+						</div>
+						<div class="card-footer">
+							<h4 class="text-center">
+								<strong>2.50 €</strong>
+							</h4>
+
+							<!-- Default checkbox -->
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+								<label class="form-check-label" for="flexCheckDefault">
+									<small>Choisir Cette Patisserie</small>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card h-100">
+						<img src="https://akobisoft.com/web/patisserie/patisserie3.jpg" class="card-img-top" alt="..."/>
+						<div class="card-body">
+							<h5 class="card-title text-center">Chou à la crème</h5>
+							<p class="card-text">
+								This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+							</p>
+						</div>
+						<div class="card-footer">
+							<h4 class="text-center">
+								<strong>2.50 €</strong>
+							</h4>
+
+							<!-- Default checkbox -->
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+								<label class="form-check-label" for="flexCheckDefault">
+									<small>Choisir Cette Patisserie</small>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card h-100">
+						<img src="https://akobisoft.com/web/patisserie/patisserie4.jpg" class="card-img-top" alt="..."/>
+						<div class="card-body">
+							<h5 class="card-title text-center">Délice au noix</h5>
+							<p class="card-text">
+								This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+							</p>
+						</div>
+						<div class="card-footer">
+							<h4 class="text-center">
+								<strong>2.50 €</strong>
+							</h4>
+
+							<!-- Default checkbox -->
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+								<label class="form-check-label" for="flexCheckDefault">
+									<small>Choisir Cette Patisserie</small>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card h-100">
+						<img src="https://akobisoft.com/web/patisserie/patisserie5.jpg" class="card-img-top" alt="..."/>
+						<div class="card-body">
+							<h5 class="card-title text-center">Gateau Marbré</h5>
+							<p class="card-text">
+								This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+							</p>
+						</div>
+						<div class="card-footer">
+							<h4 class="text-center">
+								<strong>2.50 €</strong>
+							</h4>
+
+							<!-- Default checkbox -->
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+								<label class="form-check-label" for="flexCheckDefault">
+									<small>Choisir Cette Patisserie</small>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+
+	<div class="bgimg-2">
+		<div class="text-center" style="padding: 18% 0%">
+			<button type="button" class="btn btn-outline-light btn-lg">LA CARTE</button>
+		</div>
+	</div>
+
+
+	<div class="container">
+		<section>
+			<div class="row text-center pad1">
+				<h4>LE MENU DU CHEF</h4>
+			</div>
+			<!-- Card -->
+			<div
+				class="row">
+				<!-- Patisserie 01 -->
+				<div class="col-md-6">
+					<div class="card mb-3">
+						<div class="row g-0">
+							<div class="col-md-4">
+								<img src="https://akobisoft.com/web/patisserie/patisserie6.jpg" alt="..." class="image img-fluid"/>
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<h5 class="card-title">Margerite</h5>
+									<p class="card-text">
+										This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+									</p>
+									<p
+										class="card-text">
+										<!-- Default checkbox -->
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+											<label class="form-check-label" for="flexCheckDefault">
+												<small>Choisir Cette Patisserie</small>
+											</label>
+										</div>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Patisserie 02 -->
+				<div class="col-md-6">
+					<div class="card mb-3">
+						<div class="row g-0">
+							<div class="col-md-4">
+								<img src="https://akobisoft.com/web/patisserie/patisserie10.jpg" alt="..." class="image img-fluid"/>
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<h5 class="card-title">Gateau au citron</h5>
+									<p class="card-text">
+										This is a wider card with supporting text below as a natural lead-in toadditional content. This content is a little bit longer.
+									</p>
+									<p
+										class="card-text">
+										<!-- Default checkbox -->
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+											<label class="form-check-label" for="flexCheckDefault">
+												<small>Choisir Cette Patisserie</small>
+											</label>
+										</div>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Patisserie 03 -->
+				<div class="col-md-6">
+					<div class="card mb-3">
+						<div class="row g-0">
+							<div class="col-md-4">
+								<img src="https://akobisoft.com/web/patisserie/patisserie7.jpg" alt="..." class="image img-fluid"/>
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<h5 class="card-title">Mille-Feuille</h5>
+									<p class="card-text">
+										This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+									</p>
+									<p
+										class="card-text">
+										<!-- Default checkbox -->
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+											<label class="form-check-label" for="flexCheckDefault">
+												<small>Choisir Cette Patisserie</small>
+											</label>
+										</div>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Patisserie 04 -->
+				<div class="col-md-6">
+					<div class="card mb-3">
+						<div class="row g-0">
+							<div class="col-md-4">
+								<img src="https://akobisoft.com/web/patisserie/patisserie11.jpg" alt="..." class="image img-fluid"/>
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<h5 class="card-title">Eclairs-Franboise</h5>
+									<p class="card-text">
+										This is a wider card with supporting text below as a natural lead-in toadditional content. This content is a little bit longer.
+									</p>
+									<p
+										class="card-text">
+										<!-- Default checkbox -->
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+											<label class="form-check-label" for="flexCheckDefault">
+												<small>Choisir Cette Patisserie</small>
+											</label>
+										</div>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Patisserie 05 -->
+				<div class="col-md-6">
+					<div class="card mb-3">
+						<div class="row g-0">
+							<div class="col-md-4">
+								<img src="https://akobisoft.com/web/patisserie/patisserie8.jpg" alt="..." class="image img-fluid"/>
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<h5 class="card-title">Tartelettes au Citron</h5>
+									<p class="card-text">
+										This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+									</p>
+									<p
+										class="card-text">
+										<!-- Default checkbox -->
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+											<label class="form-check-label" for="flexCheckDefault">
+												<small>Choisir Cette Patisserie</small>
+											</label>
+										</div>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Patisserie 06 -->
+				<div class="col-md-6">
+					<div class="card mb-3">
+						<div class="row g-0">
+							<div class="col-md-4">
+								<img src="https://akobisoft.com/web/patisserie/patisserie12.jpg" alt="..." class="image img-fluid"/>
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<h5 class="card-title">Petites Subtilités</h5>
+									<p class="card-text">
+										This is a wider card with supporting text below as a natural lead-in toadditional content. This content is a little bit longer.
+									</p>
+									<p
+										class="card-text">
+										<!-- Default checkbox -->
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+											<label class="form-check-label" for="flexCheckDefault">
+												<small>Choisir Cette Patisserie</small>
+											</label>
+										</div>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Form -->
+			<div
+				class="col-md-12 text-center">
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+					Commande
+				</button>
+
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div
+								class="modal-body">
+								<!-- Pills navs -->
+								<ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+									<li class="nav-item" role="presentation">
+										<a class="nav-link active" id="tab-login" data-mdb-toggle="pill" href="#pills-login" role="tab" aria-controls="pills-login" aria-selected="true">Commande</a>
+									</li>
+									<li class="nav-item" role="presentation">
+										<a class="nav-link" id="tab-register" data-mdb-toggle="pill" href="#pills-register" role="tab" aria-controls="pills-register" aria-selected="false">Inscription</a>
+									</li>
+								</ul>
+								<!-- Pills navs -->
+
+								<!-- Pills content -->
+								<div class="tab-content">
+									<div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+										<form>
+											<!-- Email input -->
+											<div class="form-outline mb-4">
+												<input type="email" id="loginName" class="form-control"/>
+												<label class="form-label" for="loginName">Adresse mail</label>
+											</div>
+
+											<!-- Password input -->
+											<div class="form-outline mb-4">
+												<input type="password" id="loginPassword" class="form-control"/>
+												<label class="form-label" for="loginPassword">Mot de passe</label>
+											</div>
+
+											<!-- 2 column grid layout -->
+											<div class="row mb-4">
+												<h4>VOTRE COMMANDE</h4>
+											</div>
+
+											<div>
+												<table class="table">
+													<thead>
+														<tr>
+															<th scope="col">#</th>
+															<th scope="col">Produit</th>
+															<th scope="col">Prix</th>
+															<th scope="col">Retirer</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<th scope="row">1</th>
+															<td>Produit 1</td>
+															<td>2.50 €</td>
+															<td>
+																<a>
+																	<i class="fas fa-times"></i>
+																</a>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row">2</th>
+															<td>Produit 2</td>
+															<td>2.50 €</td>
+															<td>
+																<a>
+																	<i class="fas fa-times"></i>
+																</a>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row">3</th>
+															<td>Produit 3</td>
+															<td>2.50 €</td>
+															<td>
+																<a>
+																	<i class="fas fa-times"></i>
+																</a>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row">4</th>
+															<td>Produit 4</td>
+															<td>2.50 €</td>
+															<td>
+																<a>
+																	<i class="fas fa-times"></i>
+																</a>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row">5</th>
+															<td>Total</td>
+															<td>10.00 €</td>
+															<td></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+
+											<!-- Submit button -->
+											<button type="submit" class="btn btn-primary btn-block mb-4">Commander</button>
+
+											<!-- Register buttons -->
+											<div class="text-center">
+												<p>Vous n'êtes pas inscrit?
+													<a href="#!">Ici</a>
+												</p>
+											</div>
+										</form>
+									</div>
+									<div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+										<form>
+											<!-- Name input -->
+											<div class="form-outline mb-4">
+												<input type="text" id="registerName" class="form-control"/>
+												<label class="form-label" for="registerName">Nom complet</label>
+											</div>
+
+											<!-- Username input -->
+											<div class="form-outline mb-4">
+												<input type="text" id="registerUsername" class="form-control"/>
+												<label class="form-label" for="registerUsername">Pseudo</label>
+											</div>
+
+											<!-- Email input -->
+											<div class="form-outline mb-4">
+												<input type="email" id="registerEmail" class="form-control"/>
+												<label class="form-label" for="registerEmail">Adresse mail</label>
+											</div>
+
+											<!-- Password input -->
+											<div class="form-outline mb-4">
+												<input type="password" id="registerPassword" class="form-control"/>
+												<label class="form-label" for="registerPassword">Mot de passe</label>
+											</div>
+
+											<!-- Repeat Password input -->
+											<div class="form-outline mb-4">
+												<input type="password" id="registerRepeatPassword" class="form-control"/>
+												<label class="form-label" for="registerRepeatPassword">Confirmer mot de passe</label>
+											</div>
+
+											<!-- Checkbox -->
+											<div class="form-check d-flex justify-content-center mb-4">
+												<input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked aria-describedby="registerCheckHelpText"/>
+												<label class="form-check-label" for="registerCheck">
+													J'ai lu et comprends les termes d'utilisations
+												</label>
+											</div>
+
+											<!-- Submit button -->
+											<button type="submit" class="btn btn-primary btn-block mb-3">S'inscrire</button>
+										</form>
+									</div>
+								</div>
+								<!-- Pills content -->
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+									Fermer
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<div class="">
+		<div class="bgimg-3">
+			<div class="container">
+				<div class="row" style="padding: 15% 0%">
+					<div class="col-md-12 text-center text-white">
+						<h2>HORAIRE D'OUVERTURE</h2>
+					</div>
+					<div class="offset-md-3 col-md-6">
+						<table class="table" style="color:white">
+							<tbody>
+								<tr>
+									<td>Lundi - Mercredi: 10h - 22h</td>
+									<td>Jeudi - Samedi: 9h - 21h</td>
+								</tr>
+								<tr>
+									<td>Dimanche : 11h - 15h</td>
+									<td>Dimanche : 18h - 22h</td>
+								</tr>
+								<tr>
+									<td>Contact : +33 55555555 / 555555555</td>
+									<td>Mail : ngma@yahoo.fr</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block footer %}
+	<!-- Footer -->
+	<footer
+		class="text-center text-lg-start bg-light text-muted">
+
+		<!-- Section: Links  -->
+		<section class="">
+			<div
+				class="container text-center text-md-start mt-5">
+				<!-- Grid row -->
+				<div
+					class="row mt-3">
+					<!-- Grid column -->
+					<div
+						class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+						<!-- Content -->
+						<h6 class="text-uppercase fw-bold mb-4">
+							<i class="fas fa-gem me-3"></i>NGMA Group
+						</h6>
+						<p>
+							Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						</p>
+					</div>
+					<!-- Grid column -->
+
+					<!-- Grid column -->
+					<div
+						class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+						<!-- Links -->
+						<h6 class="text-uppercase fw-bold mb-4">
+							Products
+						</h6>
+						<p>
+							<a href="#!" class="text-reset">Angular</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">React</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">Vue</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">Laravel</a>
+						</p>
+					</div>
+					<!-- Grid column -->
+
+					<!-- Grid column -->
+					<div
+						class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+						<!-- Links -->
+						<h6 class="text-uppercase fw-bold mb-4">
+							Liens utiles
+						</h6>
+						<p>
+							<a href="#!" class="text-reset">NGMA</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">Parametres</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">Commandes</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">Aide</a>
+						</p>
+					</div>
+					<!-- Grid column -->
+
+					<!-- Grid column -->
+					<div
+						class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+						<!-- Links -->
+						<h6 class="text-uppercase fw-bold mb-4">
+							Contact
+						</h6>
+						<p>
+							<i class="fas fa-home me-3"></i>
+							FRANCE, MP 31100, FR</p>
+						<p>
+							<i class="fas fa-envelope me-3"></i>
+							info@example.com
+						</p>
+						<p>
+							<i class="fas fa-phone me-3"></i>
+							+ 01 234 567 88</p>
+						<p>
+							<i class="fas fa-print me-3"></i>
+							+ 01 234 567 89</p>
+					</div>
+					<!-- Grid column -->
+				</div>
+				<!-- Grid row -->
+			</div>
+		</section>
+		<!-- Section: Links  -->
+
+		<!-- Copyright -->
+		<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+			© 2021 Copyright:
+			<a class="text-reset fw-bold" href="https://mdbootstrap.com/">NGMAErwan.com</a>
+		</div>
+		<!-- Copyright -->
+	</footer>
+	<!-- Footer -->
+{% endblock %}

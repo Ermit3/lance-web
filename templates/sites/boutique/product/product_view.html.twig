@@ -1,0 +1,329 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Restaurant
+{% endblock %}
+
+{% block header %}
+	<style>
+		.section {
+			padding: 1% 0;
+		}
+
+		@media(max-width: 991px) {
+			.navbar-scroll {
+				background-color: #fff;
+			}
+
+			.navbar-scroll .navbar-brand,
+			.navbar-scroll .nav-link,
+			.navbar-scroll .fa-bars {
+				color: #4f4f4f !important;
+			}
+		}
+
+		.navbar-brand {
+			letter-spacing: 3px;
+			font-size: 2rem;
+			font-weight: 500;
+		}
+		.navbar-scroll .navbar-brand,
+		.navbar-scroll .nav-link,
+		.navbar-scroll .fa-bars {
+			color: #fff;
+		}
+
+		.navbar-scroll {
+			box-shadow: none;
+		}
+
+		.navbar-scrolled {
+			box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+		}
+
+		.navbar-scrolled .navbar-brand,
+		.navbar-scrolled .nav-link,
+		.navbar-scrolled .fa-bars {
+			color: #4f4f4f;
+		}
+
+		.navbar-scrolled {
+			background-color: #fff;
+		}
+
+		@media(max-width: 450px) {
+			#intro {
+				height: 950px !important;
+			}
+		}
+
+		@media(min-width: 550px) and(max-width: 750px) {
+			#intro {
+				height: 1100px !important;
+			}
+		}
+
+		@media(min-width: 800px) and(max-width: 990px) {
+			#intro {
+				height: 600px !important;
+			}
+		}
+
+		.display-1 {
+			font-weight: 500 !important;
+			letter-spacing: 40px;
+		}
+
+		@media(min-width: 1600px) {
+			.display-1 {
+				font-size: 10rem;
+			}
+		}
+	</style>
+
+	<header>
+		<!-- Navbar -->
+		<nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#!">BOUTIQUE</a>
+				<button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<i class="fas fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#!">ACCUEIL</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#!">VENTES FLASH</a>
+						</li>
+						<div>
+							<li class="nav-item dropdown">
+								<a role="button" class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-mdb-toggle="dropdown" aria-expanded="false">SERVICES CLENTS</a>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<li>
+										<a class="dropdown-item" href="#">Action</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Another action</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Something else here</a>
+									</li>
+								</ul>
+							</li>
+						</div>
+						<div>
+							<li class="nav-item dropdown">
+								<a role="button" class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-mdb-toggle="dropdown" aria-expanded="false">SERVICES LIVRAISONS</a>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<li>
+										<a class="dropdown-item" href="#">Action</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Another action</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Something else here</a>
+									</li>
+								</ul>
+							</li>
+						</div>
+						<li class="nav-item">
+							<a class="nav-link" href="#!">CONTACT</a>
+						</li>
+					</ul>
+					<ul class="navbar-nav d-flex flex-row">
+						<li class="nav-item me-3 me-lg-0">
+							<a class="nav-link">
+								Boutique en ligne
+							</a>
+						</li>
+						<li class="nav-item me-3 me-lg-0">
+							<button type="button" class="btn btn-outline-success" data-mdb-ripple-color="dark">
+								<strong>
+									COMMANDE
+								</strong>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- Navbar -->
+
+		<!--Section: Design Block-->
+		<section>
+			<div id="intro" class="bg-image" style="background-image: url('');height: 30vh; ">
+				<div class="mask" style="background-color: rgba(0, 0, 0, 0.2);">
+					<div class="container d-flex justify-content-center align-items-center h-100">
+						<div class="row align-items-center">
+							<div class="col-12">
+								<h1 class="mb-0 text-white display-1"></h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--Section: Design Block-->
+	</header>
+{% endblock %}
+
+{% block body %}
+	<div class="container-fluid">
+		<div class="example-wrapper section">
+			<div class="row justify-content-center">
+				<div class="col-md-4 text-center"></div>
+			</div>
+			<div class="row">
+				<div class="card mb-3">
+					<div class="row g-0">
+						<div class="col-md-4 align-self-center">
+							<div class="card-body">
+								<h5 class="card-title">Macbook Pro 13</h5>
+								<p class="card-text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae tempore repellat sapiente hic, similique, enim et laboriosam autem, iste nisi accusantium voluptate sit. Quos, aliquam!
+								</p>
+								<div class="row">
+									<div class="col-md-3 text-center align-self-center">
+										<p class="card-text">
+											<strong>85.00 €</strong>
+										</p>
+									</div>
+									<i class="fas fa-minus col-md-1" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></i>
+									<div class="number-input md-number-input col-md-2">
+										<input class="form-control" min="0" name="quantity" value="1" type="number">
+									</div>
+									<i class="fas fa-plus col-md-1" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"></i>
+									<div class="col-md-5 text-center">
+										<a href="#" type="button" class="btn btn-dark btn-lg rounded-0" data-mdb-ripple-color="dark">
+											<strong>AJOUTER AU PANIER</strong>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-1"></div>
+						<div class="col-md-7">
+							<img src="https://picsum.photos/id/2/800/800" alt="..." class="img-fluid"/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-5">
+					<h3>Description</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum ut maxime eos repellat, qui saepe labore libero, consectetur excepturi alias perferendis obcaecati expedita sequi eius a ab! Id autem minus ipsa et. Corporis quis voluptas iusto facilis accusamus. Enim laboriosam doloribus explicabo reiciendis iusto ipsam in laborum alias sequi id.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block footer %}
+	<!-- Footer -->
+	<footer
+		class="text-center text-lg-start bg-light text-muted">
+
+		<!-- Section: Links  -->
+		<section class="">
+			<div
+				class="container text-center text-md-start mt-5">
+				<!-- Grid row -->
+				<div
+					class="row mt-3">
+					<!-- Grid column -->
+					<div
+						class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+						<!-- Content -->
+						<h6 class="text-uppercase fw-bold mb-4">
+							<i class="fas fa-gem me-3"></i>NGMA Group
+						</h6>
+						<p>
+							Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						</p>
+					</div>
+					<!-- Grid column -->
+
+					<!-- Grid column -->
+					<div
+						class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+						<!-- Links -->
+						<h6 class="text-uppercase fw-bold mb-4">
+							Products
+						</h6>
+						<p>
+							<a href="#!" class="text-reset">Angular</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">React</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">Vue</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">Laravel</a>
+						</p>
+					</div>
+					<!-- Grid column -->
+
+					<!-- Grid column -->
+					<div
+						class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+						<!-- Links -->
+						<h6 class="text-uppercase fw-bold mb-4">
+							Liens utiles
+						</h6>
+						<p>
+							<a href="#!" class="text-reset">NGMA</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">Parametres</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">Commandes</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">Aide</a>
+						</p>
+					</div>
+					<!-- Grid column -->
+
+					<!-- Grid column -->
+					<div
+						class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+						<!-- Links -->
+						<h6 class="text-uppercase fw-bold mb-4">
+							Contact
+						</h6>
+						<p>
+							<i class="fas fa-home me-3"></i>
+							FRANCE, MP 31100, FR</p>
+						<p>
+							<i class="fas fa-envelope me-3"></i>
+							info@example.com
+						</p>
+						<p>
+							<i class="fas fa-phone me-3"></i>
+							+ 01 234 567 88</p>
+						<p>
+							<i class="fas fa-print me-3"></i>
+							+ 01 234 567 89</p>
+					</div>
+					<!-- Grid column -->
+				</div>
+				<!-- Grid row -->
+			</div>
+		</section>
+		<!-- Section: Links  -->
+
+		<!-- Copyright -->
+		<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+			© 2021 Copyright:
+			<a class="text-reset fw-bold" href="https://mdbootstrap.com/">NGMAErwan.com</a>
+		</div>
+		<!-- Copyright -->
+	</footer>
+	<!-- Footer -->
+{% endblock %}
